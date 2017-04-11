@@ -17,9 +17,9 @@ class ViewController: UIViewController {
             withUser: "114466", pass: "ce12da08da0dakZX", server: "www.voiptigersip.com", proxy: "<proxy>")
         ZoiperVoip.sharedInstance().activationRegister("", password: "")
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.ctxRegistrationSucceeded(_:)), name: NSNotification.Name(rawValue: "ZSDKctxDidRegistrationSucceeded"), object: nil)
-//        
-//        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.ctxActivationStatusUpdated(_:)), name: NSNotification.Name(rawValue: "ZSDKctxDidActivationStatusUpdated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.ctxRegistrationSucceeded(_:)), name: NSNotification.Name(rawValue: "ZSDKctxDidRegistrationSucceeded"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.ctxActivationStatusUpdated(_:)), name: NSNotification.Name(rawValue: "ZSDKctxDidActivationStatusUpdated"), object: nil)
 
     }
 

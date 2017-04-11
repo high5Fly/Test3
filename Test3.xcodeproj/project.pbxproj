@@ -13,6 +13,9 @@
 		FF21C0DF1E9D571E0086C2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF21C0DE1E9D571E0086C2C6 /* Assets.xcassets */; };
 		FF21C0E21E9D571E0086C2C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF21C0E01E9D571E0086C2C6 /* LaunchScreen.storyboard */; };
 		FF21C0EB1E9D57590086C2C6 /* libzoiperVoip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21C0EA1E9D57590086C2C6 /* libzoiperVoip.a */; };
+		FFE15F671E9D650500E10F3F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE15F661E9D650500E10F3F /* AudioToolbox.framework */; };
+		FFE15F6B1E9D656100E10F3F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE15F6A1E9D656100E10F3F /* libstdc++.6.0.9.tbd */; };
+		FFE15F6D1E9D656C00E10F3F /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE15F6C1E9D656C00E10F3F /* libresolv.9.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		FF21C0EA1E9D57590086C2C6 /* libzoiperVoip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzoiperVoip.a; sourceTree = "<group>"; };
 		FF21C0EC1E9D57610086C2C6 /* ZoiperVoip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoiperVoip.h; sourceTree = "<group>"; };
 		FF21C0EE1E9D57CF0086C2C6 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		FFE15F661E9D650500E10F3F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FFE15F681E9D653C00E10F3F /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "../../../../usr/lib/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
+		FFE15F6A1E9D656100E10F3F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		FFE15F6C1E9D656C00E10F3F /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE15F6D1E9D656C00E10F3F /* libresolv.9.tbd in Frameworks */,
+				FFE15F6B1E9D656100E10F3F /* libstdc++.6.0.9.tbd in Frameworks */,
+				FFE15F671E9D650500E10F3F /* AudioToolbox.framework in Frameworks */,
 				FF21C0EB1E9D57590086C2C6 /* libzoiperVoip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +55,7 @@
 			children = (
 				FF21C0D61E9D571E0086C2C6 /* Test3 */,
 				FF21C0D51E9D571E0086C2C6 /* Products */,
+				FFE15F651E9D650500E10F3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +89,17 @@
 				FF21C0EC1E9D57610086C2C6 /* ZoiperVoip.h */,
 			);
 			name = Zoiper;
+			sourceTree = "<group>";
+		};
+		FFE15F651E9D650500E10F3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFE15F6C1E9D656C00E10F3F /* libresolv.9.tbd */,
+				FFE15F6A1E9D656100E10F3F /* libstdc++.6.0.9.tbd */,
+				FFE15F681E9D653C00E10F3F /* libstdc++.6.0.9.dylib */,
+				FFE15F661E9D650500E10F3F /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +356,7 @@
 				FF21C0E81E9D571E0086C2C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
