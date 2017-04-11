@@ -12,6 +12,7 @@
 		FF21C0DD1E9D571E0086C2C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF21C0DB1E9D571E0086C2C6 /* Main.storyboard */; };
 		FF21C0DF1E9D571E0086C2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF21C0DE1E9D571E0086C2C6 /* Assets.xcassets */; };
 		FF21C0E21E9D571E0086C2C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF21C0E01E9D571E0086C2C6 /* LaunchScreen.storyboard */; };
+		FF21C0EB1E9D57590086C2C6 /* libzoiperVoip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21C0EA1E9D57590086C2C6 /* libzoiperVoip.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		FF21C0DE1E9D571E0086C2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF21C0E11E9D571E0086C2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF21C0E31E9D571E0086C2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF21C0EA1E9D57590086C2C6 /* libzoiperVoip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzoiperVoip.a; sourceTree = "<group>"; };
+		FF21C0EC1E9D57610086C2C6 /* ZoiperVoip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoiperVoip.h; sourceTree = "<group>"; };
+		FF21C0EE1E9D57CF0086C2C6 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF21C0EB1E9D57590086C2C6 /* libzoiperVoip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +59,25 @@
 		FF21C0D61E9D571E0086C2C6 /* Test3 */ = {
 			isa = PBXGroup;
 			children = (
+				FF21C0E91E9D57450086C2C6 /* Zoiper */,
 				FF21C0D71E9D571E0086C2C6 /* AppDelegate.swift */,
 				FF21C0D91E9D571E0086C2C6 /* ViewController.swift */,
+				FF21C0EE1E9D57CF0086C2C6 /* BridgingHeader.h */,
 				FF21C0DB1E9D571E0086C2C6 /* Main.storyboard */,
 				FF21C0DE1E9D571E0086C2C6 /* Assets.xcassets */,
 				FF21C0E01E9D571E0086C2C6 /* LaunchScreen.storyboard */,
 				FF21C0E31E9D571E0086C2C6 /* Info.plist */,
 			);
 			path = Test3;
+			sourceTree = "<group>";
+		};
+		FF21C0E91E9D57450086C2C6 /* Zoiper */ = {
+			isa = PBXGroup;
+			children = (
+				FF21C0EA1E9D57590086C2C6 /* libzoiperVoip.a */,
+				FF21C0EC1E9D57610086C2C6 /* ZoiperVoip.h */,
+			);
+			name = Zoiper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +112,7 @@
 				TargetAttributes = {
 					FF21C0D31E9D571E0086C2C6 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = ZHV32JTWEJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -262,10 +279,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DEVELOPMENT_TEAM = ZHV32JTWEJ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Test3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test3",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MTD.Test3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Test3/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,10 +299,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DEVELOPMENT_TEAM = ZHV32JTWEJ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Test3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test3",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MTD.Test3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Test3/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
